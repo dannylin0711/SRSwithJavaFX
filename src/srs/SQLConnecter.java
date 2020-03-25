@@ -30,28 +30,28 @@ public class SQLConnecter {
 
     public static Boolean loginSession(String accountName, String accountPassword, AccountLoggedIn ownerName){
         checkStatementAvailability();
-        String tempacc,temppwd;
+        String tempAcc,tempPwd;
         try {
             String query="select * from Account\n"+ "Where ID ='" +accountName+"'";
             statement.executeQuery(query);
             resultSets = statement.getResultSet();
             if(resultSets.next()) {
-                tempacc = resultSets.getString("ID");
-                temppwd = resultSets.getString("Password");
+                tempAcc = resultSets.getString("ID");
+                tempPwd = resultSets.getString("Password");
                 ownerName.setName(resultSets.getString("name"));
-                //tempidentify = resultSets.getInt("identity");
+                //tempIdentify = resultSets.getInt("identity");
             }else{
-                tempacc = "";
-                temppwd = "";
+                tempAcc = "";
+                tempPwd = "";
 
             }
 
 
-            if(tempacc.equals(accountName)&&temppwd.equals(accountPassword)) {
+            if(tempAcc.equals(accountName)&&tempPwd.equals(accountPassword)) {
                 return true;
             }
         }catch(Exception ex) {
-            System.out.println(ex);
+            System.out.println(ex.getMessage());
 
         }
         return false;
