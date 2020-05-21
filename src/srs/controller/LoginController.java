@@ -10,10 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
@@ -32,6 +29,7 @@ public class LoginController implements Initializable {
     @FXML PasswordField passwordTextField;
     @FXML Button loginButton;
     @FXML Button resetPasswordButton;
+    @FXML Button signUpButton;
 
     private AccountLoggedIn accountOwnerName = new AccountLoggedIn("");
 
@@ -73,6 +71,14 @@ public class LoginController implements Initializable {
         }else{
             loginFailed();
         }
+    }
+
+    @FXML
+    void signUpClicked(){
+        Alert contactAdmin = new Alert(Alert.AlertType.WARNING,"請聯絡系統管理員建立帳號！", ButtonType.OK);
+        contactAdmin.setTitle("權限不足");
+        contactAdmin.setHeaderText("權限不足");
+        contactAdmin.show();
     }
 
     private void loginSession(Event e) throws IOException {

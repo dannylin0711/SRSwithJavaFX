@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -8,9 +9,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="srs.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="srs.controller.LoginController">
    <children>
-      <GridPane alignment="CENTER" layoutX="68.0" layoutY="-6.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+      <GridPane alignment="CENTER" layoutX="68.0" layoutY="-6.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="90.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="210.0" />
@@ -25,13 +26,19 @@
             <Label text="密碼" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <TextField fx:id="accountTextField" GridPane.columnIndex="1" />
             <PasswordField fx:id="passwordTextField" onAction="#loginClicked" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <HBox alignment="CENTER_LEFT" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginClicked" text="登入" />
+                  <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpClicked" text="註冊" />
                   <Button fx:id="resetPasswordButton" mnemonicParsing="false" text="忘記密碼" />
                </children>
             </HBox>
          </children>
       </GridPane>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="53.0" text="課程系統" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

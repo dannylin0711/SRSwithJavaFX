@@ -17,7 +17,7 @@ public class MainmenuController {
     void logout(ActionEvent actionEvent) throws IOException {
         Stage currentStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/LoginControllerScene.fxml"));
-        currentStage.setScene(new Scene(root,300,200));
+        currentStage.setScene(new Scene(root,300,300));
         currentStage.setTitle("課程系統 V1.0");
     }
 }
