@@ -23,11 +23,11 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="課程查詢" GridPane.rowIndex="1" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="選課作業" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="課表查詢" GridPane.rowIndex="2" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="新增/修改 課程" GridPane.rowIndex="4" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="學生名單" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="queryClassButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#queryClassButtonClicked" text="課程查詢" GridPane.rowIndex="1" />
+            <Button fx:id="selectClassButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="選課作業" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="querySchedule" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="課表查詢" GridPane.rowIndex="2" />
+            <Button fx:id="addClassButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="新增/修改 課程" GridPane.rowIndex="4" />
+            <Button fx:id="listStudent" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="學生名單" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button fx:id="logoutButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" text="登出" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label alignment="BOTTOM_LEFT" maxWidth="1.7976931348623157E308" text="教師功能" GridPane.rowIndex="3" />
             <Label text="通用功能" />

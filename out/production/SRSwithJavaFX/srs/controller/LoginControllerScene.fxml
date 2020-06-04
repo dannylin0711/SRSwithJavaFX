@@ -30,7 +30,7 @@
                <children>
                   <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginClicked" text="登入" />
                   <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpClicked" text="註冊" />
-                  <Button fx:id="resetPasswordButton" mnemonicParsing="false" text="忘記密碼" />
+                  <Button fx:id="resetPasswordButton" mnemonicParsing="false" onAction="#forgotPassword" text="忘記密碼" />
                </children>
             </HBox>
          </children>

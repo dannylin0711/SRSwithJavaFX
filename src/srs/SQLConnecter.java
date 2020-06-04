@@ -1,6 +1,9 @@
 package srs;
 
-import srs.model.AccountLoggedIn;
+import srs.controller.LoginController;
+import srs.model.People;
+import srs.model.Professor;
+import srs.model.Student;
 
 import java.sql.*;
 
@@ -28,7 +31,7 @@ public class SQLConnecter {
         }
     }
 
-    public static Boolean loginSession(String accountName, String accountPassword, AccountLoggedIn ownerName){
+    public static Boolean loginSession(String accountName, String accountPassword){
         checkStatementAvailability();
         String tempAcc,tempPwd;
         try {
@@ -38,7 +41,19 @@ public class SQLConnecter {
             if(resultSets.next()) {
                 tempAcc = resultSets.getString("ID");
                 tempPwd = resultSets.getString("Password");
-                ownerName.setName(resultSets.getString("name"));
+                int currentUserType = resultSets.getInt("identity");
+                String name = resultSets.getString("name");
+                switch (currentUserType){
+                    case 0:
+                        LoginController.accountOwnerName = new Student(name);
+                        break;
+                    case 1:
+                        LoginController.accountOwnerName = new Professor(name);
+                        break;
+                    case 2:
+                        break;
+                }
+                //ownerName.setName(resultSets.getString("name"));
                 //tempIdentify = resultSets.getInt("identity");
             }else{
                 tempAcc = "";

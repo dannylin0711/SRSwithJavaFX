@@ -1,24 +1,30 @@
 package srs.controller;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 import srs.SQLConnecter;
 import srs.model.AccountLoggedIn;
+import srs.model.People;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 
@@ -31,13 +37,13 @@ public class LoginController implements Initializable {
     @FXML Button resetPasswordButton;
     @FXML Button signUpButton;
 
-    private AccountLoggedIn accountOwnerName = new AccountLoggedIn("");
+    static public People accountOwnerName;
 
     @FXML
     void loginClicked(ActionEvent e){
         String account = accountTextField.getText();
         String password = passwordTextField.getText();
-        boolean loginToken = SQLConnecter.loginSession(account,password,accountOwnerName);
+        boolean loginToken = SQLConnecter.loginSession(account,password);
         if(account.equals("") || password.equals("")){
             loginToken = false;
         }
@@ -57,7 +63,7 @@ public class LoginController implements Initializable {
     void loginClicked(KeyEvent e){
         String account = accountTextField.getText();
         String password = passwordTextField.getText();
-        boolean loginToken = SQLConnecter.loginSession(account,password,accountOwnerName);
+        boolean loginToken = SQLConnecter.loginSession(account,password);
         if(account.equals("") || password.equals("")){
             loginToken = false;
         }
@@ -79,6 +85,16 @@ public class LoginController implements Initializable {
         contactAdmin.setTitle("權限不足");
         contactAdmin.setHeaderText("權限不足");
         contactAdmin.show();
+    }
+
+    @FXML
+    void forgotPassword(){
+        Alert contactAdmin = new Alert(Alert.AlertType.WARNING,"請聯絡系統管理員重設密碼！", ButtonType.OK);
+        contactAdmin.setTitle("警告");
+        contactAdmin.setHeaderText("權限不足");
+        contactAdmin.show();
+
+
     }
 
     private void loginSession(Event e) throws IOException {

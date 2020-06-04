@@ -3,6 +3,7 @@ package srs.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import srs.model.Course;
 
@@ -19,5 +20,6 @@ public class ClassViewerController implements Initializable {
                 "課程名稱",
                 "教授名稱"
         );
+        courseTableView.setPlaceholder(new Label("無課程資訊"));
     }
 }
