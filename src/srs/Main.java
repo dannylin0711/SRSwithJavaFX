@@ -15,6 +15,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("controller/LoginControllerScene.fxml"));
         primaryStage.setTitle("課程系統 V1.0");
         primaryStage.setScene(new Scene(root, 300, 300));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class MainmenuController implements Initializable {
     @FXML Button selectClassButton;
     @FXML Button addClassButton;
     @FXML Button listStudent;
+    @FXML Label welcomeLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,6 +42,7 @@ public class MainmenuController implements Initializable {
                 querySchedule.setDisable(false);
                 break;
         }
+        welcomeLabel.setText("歡迎! "+LoginController.accountOwnerName.getName());
     }
 
     @FXML
@@ -47,6 +50,7 @@ public class MainmenuController implements Initializable {
         Stage currentStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/LoginControllerScene.fxml"));
         currentStage.setScene(new Scene(root,300,300));
+        currentStage.setResizable(false);
         currentStage.setTitle("課程系統 V1.0");
     }
 
@@ -55,6 +59,7 @@ public class MainmenuController implements Initializable {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/ClassViewerScene.fxml"));
         stage.setTitle("課程查詢");
+        stage.setResizable(false);
         stage.setScene(new Scene(root, 667, 400));
         stage.show();
     }

@@ -97,14 +97,24 @@ public class LoginController implements Initializable {
 
     }
 
-    private void loginSession(Event e) throws IOException {
+    private void loginSession(ActionEvent e) throws IOException {
         System.out.println("Success");
         System.out.println(accountOwnerName.getName());
         Stage currentStage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/MainmenuScene.fxml"));
-        currentStage.setScene(new Scene(root,300,300));
-        currentStage.setTitle("課程系統 V1.0 登入者:"+accountOwnerName.getName());
+        currentStage.setScene(new Scene(root,300,400));
+        currentStage.setResizable(false);
+        currentStage.setTitle("課程系統 V1.0");
+    }
 
+    private void loginSession(KeyEvent e) throws IOException {
+        System.out.println("Success");
+        System.out.println(accountOwnerName.getName());
+        Stage currentStage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/MainmenuScene.fxml"));
+        currentStage.setScene(new Scene(root,300,400));
+        currentStage.setResizable(false);
+        currentStage.setTitle("課程系統 V1.0");
     }
 
     private void loginFailed(){
