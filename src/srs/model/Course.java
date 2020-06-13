@@ -1,49 +1,86 @@
 package srs.model;
 
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import srs.SQLConnecter;
+
 public class Course {
-    private int id;
-    private String courseName,lecturer;
-    private int weekday,period,periodLength;
+    private IntegerProperty id;
+    private StringProperty courseName,lecturerString;
+    private IntegerProperty weekday,period,periodLength,lecturer;
 
     Course(){
-        id = 0;
-        courseName = "";
-        lecturer = "";
-        weekday = 0;
-        period = 0;
-        periodLength = 0;
+//        id = 0;
+//        courseName = "";
+//        lecturer = "";
+//        weekday = 0;
+//        period = 0;
+//        periodLength = 0;
+        id = new SimpleIntegerProperty(0);
+        courseName = new SimpleStringProperty("");
+        lecturer = new SimpleIntegerProperty(0);
+        weekday = new SimpleIntegerProperty(0);
+        period = new SimpleIntegerProperty(0);
+        periodLength = new SimpleIntegerProperty(0);
+        lecturerString = new SimpleStringProperty("");
     }
 
-    Course(int id,String courseName,String lecturer,int weekday,int period,int periodLength){
-        this.id = id;
-        this.courseName = courseName;
-        this.lecturer = lecturer;
-        this.weekday = weekday;
-        this.period = period;
-        this.periodLength = periodLength;
+    public Course(int id, String courseName, int lecturer, int weekday, int period, int periodLength){
+        this.id = new SimpleIntegerProperty(id);
+        this.courseName = new SimpleStringProperty(courseName);
+        this.lecturer = new SimpleIntegerProperty(lecturer);
+        this.weekday = new SimpleIntegerProperty(weekday);
+        this.period = new SimpleIntegerProperty(period);
+        this.periodLength = new SimpleIntegerProperty(periodLength);
+        this.lecturerString = new SimpleStringProperty("");
     }
 
-    String getCourseName(){
+    public StringProperty getCourseName(){
         return courseName;
     }
 
-    String getLecturer(){
+    public IntegerProperty getLecturer(){
         return lecturer;
     }
 
-    int getId(){
+    public IntegerProperty getId(){
         return id;
     }
 
-    int getWeekday(){
-        return weekday;
+    public StringProperty getWeekday(){
+        StringProperty tempWeekdayStringProperty = new SimpleStringProperty("未設定");
+        switch (this.weekday.get()){
+            case 1:
+                tempWeekdayStringProperty = new SimpleStringProperty("一");
+                break;
+            case 2:
+                tempWeekdayStringProperty = new SimpleStringProperty("二");
+                break;
+            case 3:
+                tempWeekdayStringProperty = new SimpleStringProperty("三");
+                break;
+            case 4:
+                tempWeekdayStringProperty = new SimpleStringProperty("四");
+                break;
+            case 5:
+                tempWeekdayStringProperty = new SimpleStringProperty("五");
+                break;
+        }
+        return tempWeekdayStringProperty;
     }
 
-    int getPeriod(){
+    public IntegerProperty getPeriod(){
         return period;
     }
 
-    int getPeriodLength(){
+    public IntegerProperty getPeriodLength(){
         return periodLength;
+    }
+
+    public void updateLecturerStringInfo(){
+//        SQLConnecter.update
     }
 }

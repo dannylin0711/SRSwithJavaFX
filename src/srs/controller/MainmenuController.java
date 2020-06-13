@@ -23,6 +23,8 @@ public class MainmenuController implements Initializable {
     @FXML Button addClassButton;
     @FXML Button listStudent;
     @FXML Label welcomeLabel;
+    @FXML Button adminChangeUserPasswordButton;
+    @FXML Button changePasswordButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,6 +35,7 @@ public class MainmenuController implements Initializable {
                 queryClassButton.setDisable(false);
                 querySchedule.setDisable(false);
                 selectClassButton.setDisable(false);
+                adminChangeUserPasswordButton.setDisable(true);
                 break;
             case teacher:
                 queryClassButton.setDisable(true);
@@ -40,6 +43,15 @@ public class MainmenuController implements Initializable {
                 addClassButton.setDisable(false);
                 listStudent.setDisable(false);
                 querySchedule.setDisable(false);
+                adminChangeUserPasswordButton.setDisable(true);
+                break;
+            case administrator:
+                queryClassButton.setDisable(false);
+                selectClassButton.setDisable(false);
+                addClassButton.setDisable(false);
+                listStudent.setDisable(false);
+                querySchedule.setDisable(false);
+                adminChangeUserPasswordButton.setDisable(false);
                 break;
         }
         welcomeLabel.setText("歡迎! "+LoginController.accountOwnerName.getName());
@@ -60,7 +72,7 @@ public class MainmenuController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/ClassViewerScene.fxml"));
         stage.setTitle("課程查詢");
         stage.setResizable(false);
-        stage.setScene(new Scene(root, 667, 400));
+        stage.setScene(new Scene(root, 800, 400));
         stage.show();
     }
 

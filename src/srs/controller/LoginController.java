@@ -102,7 +102,7 @@ public class LoginController implements Initializable {
         System.out.println(accountOwnerName.getName());
         Stage currentStage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/MainmenuScene.fxml"));
-        currentStage.setScene(new Scene(root,300,400));
+        currentStage.setScene(new Scene(root,300,500));
         currentStage.setResizable(false);
         currentStage.setTitle("課程系統 V1.0");
     }
@@ -112,7 +112,7 @@ public class LoginController implements Initializable {
         System.out.println(accountOwnerName.getName());
         Stage currentStage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/srs/controller/MainmenuScene.fxml"));
-        currentStage.setScene(new Scene(root,300,400));
+        currentStage.setScene(new Scene(root,300,500));
         currentStage.setResizable(false);
         currentStage.setTitle("課程系統 V1.0");
     }

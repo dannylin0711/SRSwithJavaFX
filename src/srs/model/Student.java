@@ -8,4 +8,8 @@ public class Student extends People {
         this.name = name;
         this.type = UserType.student;
     }
+
+    public void addClass(){
+
+    }
 }
