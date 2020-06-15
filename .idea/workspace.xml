@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Add Sign Up button with alert.">
-      <change afterPath="$PROJECT_DIR$/src/srs/model/Admin.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Update ClassViewerController">
+      <change afterPath="$PROJECT_DIR$/src/srs/controller/ScheduleViewer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/srs/controller/ScheduleViewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRSwithJavaFX/srs/controller/MainmenuScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRSwithJavaFX/srs/controller/MainmenuScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SRSwithJavaFX/srs/controller/ClassViewerScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRSwithJavaFX/srs/controller/ClassViewerScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/srs/SQLConnecter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/SQLConnecter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/controller/ClassViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/controller/ClassViewerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/controller/ClassViewerScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/controller/ClassViewerScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/controller/MainmenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/controller/MainmenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/controller/MainmenuScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/controller/MainmenuScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/model/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/model/People.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/srs/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/srs/model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +61,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Enum" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -221,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590025523278</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update ClassViewerController">
+      <created>1592051086591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592051086591</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -231,7 +231,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Add Sign Up button with alert." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Sign Up button with alert." />
+    <MESSAGE value="Update ClassViewerController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ClassViewerController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="106" key="#Project_Structure" timestamp="1584440041294">
@@ -251,9 +252,10 @@
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="413" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.833@0.23.1440.833" timestamp="1590024638581" />
-    <state x="533" y="157" key="#com.intellij.ide.util.MemberChooser" timestamp="1591798670075">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="711" y="186" key="#com.intellij.ide.util.MemberChooser" timestamp="1592051359413">
+      <screen x="0" y="23" width="1920" height="1013" />
     </state>
+    <state x="711" y="186" key="#com.intellij.ide.util.MemberChooser/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592051359413" />
     <state x="533" y="157" key="#com.intellij.ide.util.MemberChooser/0.23.1440.835@0.23.1440.835" timestamp="1591798670075" />
     <state x="533" y="157" key="#com.intellij.ide.util.MemberChooser/0.23.1440.836@0.23.1440.836" timestamp="1584595622064" />
     <state x="790" y="230" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585015821983">
@@ -264,9 +266,10 @@
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="408" y="182" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.833@0.23.1440.833" timestamp="1590023917897" />
-    <state x="420" y="24" width="1125" height="795" key="CommitChangelistDialog2" timestamp="1591694915720">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="420" y="46" width="1125" height="795" key="CommitChangelistDialog2" timestamp="1592051086370">
+      <screen x="0" y="23" width="1920" height="1013" />
     </state>
+    <state x="420" y="46" key="CommitChangelistDialog2/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592051086370" />
     <state x="420" y="24" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591694915720" />
     <state x="315" y="42" width="1125" height="795" key="CommitChangelistDialog2/0.23.1440.833@0.23.1440.833" timestamp="1590025705985" />
     <state x="315" y="42" key="CommitChangelistDialog2/0.23.1440.835@0.23.1440.835" timestamp="1591238740503" />
@@ -334,19 +337,28 @@
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591448951189" />
     <state width="1398" height="267" key="GridCell.Tab.1.right/0.23.1440.835@0.23.1440.835" timestamp="1591238189071" />
     <state width="1398" height="268" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1584602875736" />
+    <state x="610" y="230" key="NewModule_or_Project.wizard" timestamp="1592052379767">
+      <screen x="0" y="23" width="1920" height="1013" />
+    </state>
+    <state x="610" y="230" key="NewModule_or_Project.wizard/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592052379767" />
     <state x="330" y="98" key="SettingsEditor" timestamp="1590024430789">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585015825517" />
     <state x="330" y="98" key="SettingsEditor/0.23.1440.833@0.23.1440.833" timestamp="1590024430789" />
-    <state x="320" y="179" key="Vcs.Push.Dialog.v2" timestamp="1590025525762">
-      <screen x="0" y="23" width="1440" height="833" />
+    <state x="427" y="213" key="Vcs.Push.Dialog.v2" timestamp="1592051090895">
+      <screen x="0" y="23" width="1920" height="1013" />
     </state>
+    <state x="427" y="213" key="Vcs.Push.Dialog.v2/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592051090895" />
     <state x="320" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.833@0.23.1440.833" timestamp="1590025525762" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1592036046431">
       <screen x="0" y="23" width="1920" height="1013" />
     </state>
     <state width="600" height="424" key="javadoc.popup/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592036046431" />
+    <state x="389" y="233" key="new project wizard" timestamp="1592052476114">
+      <screen x="0" y="23" width="1920" height="1013" />
+    </state>
+    <state x="389" y="233" key="new project wizard/-1440.203.1440.877/0.23.1920.1013@0.23.1920.1013" timestamp="1592052476114" />
     <state x="426" y="63" key="refactoring.ChangeSignatureDialog" timestamp="1591234904923">
       <screen x="0" y="23" width="1440" height="835" />
     </state>

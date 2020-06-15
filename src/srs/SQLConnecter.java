@@ -79,6 +79,7 @@ public class SQLConnecter {
     }
 
     public static ResultSet searchSchedule(String Account) {
+        setConnection("Schedule");
         try {
             String query = "Select * from "+Account;
             statement.executeQuery(query);
@@ -119,6 +120,7 @@ public class SQLConnecter {
             //System.out.println(forRe);
         }catch(Exception ex) {
             //System.out.println(ex);
+            ex.printStackTrace();
         }
         return courseObservableList;
     }
@@ -134,6 +136,7 @@ public class SQLConnecter {
             //System.out.println(forRe);
         }catch(Exception ex) {
             //System.out.println(ex);
+            ex.printStackTrace();
         }
         return forRe;
     }
@@ -146,7 +149,7 @@ public class SQLConnecter {
             statement.executeQuery(query);
             resultSets =statement.getResultSet();
         }catch(Exception x) {
-
+            x.printStackTrace();
         }
         return resultSets;
     }
@@ -159,7 +162,7 @@ public class SQLConnecter {
                 return true;
             }
         }catch(Exception ex){
-
+            ex.printStackTrace();
         }
         return false;
     }
