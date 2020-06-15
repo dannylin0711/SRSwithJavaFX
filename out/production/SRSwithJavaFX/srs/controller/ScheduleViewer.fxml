@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="srs.controller.ScheduleViewer">
+   <children>
+      <TableView layoutX="55.0" layoutY="33.0" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="節數\周次" />
+          <TableColumn prefWidth="75.0" text="星期一" />
+            <TableColumn prefWidth="75.0" text="星期二" />
+            <TableColumn prefWidth="75.0" text="星期三" />
+            <TableColumn prefWidth="75.0" text="星期四" />
+            <TableColumn prefWidth="75.0" text="星期五" />
+            <TableColumn prefWidth="75.0" text="星期六" />
+            <TableColumn prefWidth="75.0" text="星期日" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

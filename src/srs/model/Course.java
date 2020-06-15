@@ -13,12 +13,6 @@ public class Course {
     private IntegerProperty weekday,period,periodLength,lecturer;
 
     Course(){
-//        id = 0;
-//        courseName = "";
-//        lecturer = "";
-//        weekday = 0;
-//        period = 0;
-//        periodLength = 0;
         id = new SimpleIntegerProperty(0);
         courseName = new SimpleStringProperty("");
         lecturer = new SimpleIntegerProperty(0);
